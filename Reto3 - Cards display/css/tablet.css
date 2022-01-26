@@ -1,0 +1,28 @@
+.page-description {
+    margin: 0 auto;
+    width: 85%;
+}
+
+.cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 300px;
+}
+
+.block-center {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.card.supervisor {
+    order: -1;
+}
+
+.block-center {
+    order: 1;
+}

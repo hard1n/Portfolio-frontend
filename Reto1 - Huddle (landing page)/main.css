@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(257, 40%, 49%);
+    background-image: url(./assets/imgs/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    padding: 15px;
+}
+
+.main-container {
+    display: grid;
+    justify-content: center;
+}
+
+.header {
+    margin: 15px 0;
+}
+
+.main-image {
+    width: 100%;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    height: 280px;
+    width: 100%;
+}
+
+.subtitle {
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    width: 90%;
+}
+
+.main-info {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.register-btn {
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 0px 6px 6px rgb(0 0 0 / 25%);
+    color: hsl(257, 40%, 49%);
+    font-size: 1rem;
+    padding: 10px;
+    width: 220px;
+}
+
+.register-btn:active {
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 20%);
+    opacity: 70%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+}
+
+.icon {
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 0 5px;
+    align-items: center;
+    font-size: 1.2rem;
+    height: 40px;
+    width: 40px;
+}
+
+.icon:active {
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    opacity: 80%;
+}

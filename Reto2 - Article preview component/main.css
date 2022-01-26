@@ -1,0 +1,155 @@
+:root {
+    --primary-color: hsl(217, 19%, 35%); /*Very-Dark-Grayish-Blue*/
+    --primary-light-color: hsl(214, 17%, 51%); /*Desaturated-Dark-Blue*/
+    --secundary-color: hsl(212, 23%, 69%); /*Grayish-Blue*/
+    --background-color: hsl(210, 46%, 95%); /*Light-Grayish-Blue*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--background-color);
+    font-size: 62.5%;
+    font-family: Manrope;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.article {
+    border-radius: 12px;
+	box-shadow: 0px 4px 6px rgba(12, 12, 12, 20%);
+    display: grid;
+    position: relative;
+    width: 100%;
+    min-width: 350px;
+}
+
+.article__img {
+    background-image: url(./assets/imgs/drawers.jpg);
+	background-size: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 220px;
+}
+
+.content-container {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.article__title {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+
+.article__content {
+    font-size: 1.4rem;
+    color: var(--primary-light-color);
+    line-height: 2.2rem;
+    margin: 15px 0;
+}
+
+.article__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.user__img {
+    border-radius: 50%;
+}
+
+.user__name {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.article__date {
+    color: var(--primary-light-color);
+    font-size: 1.2rem;
+}
+
+.share {
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 50%;
+    color: red;
+    text-decoration: none;
+    outline: none;
+    height: 40px;
+    width: 40px;
+}
+
+.share:active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.share-icon {
+    font-size: 1.8rem;
+    height: inherit;
+    width: 30px;
+}
+
+.modal-share {
+    background-color: transparent;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    padding: 10px 15px;
+    position: absolute;
+    right: 15px;
+    bottom: 60px;
+    transform: scale(0);
+    transition: 200ms ease;
+    text-align: center;
+    height: 200px;
+    width: 70px;
+}
+
+.modal-share.active {
+    transform: scale(1);
+}
+
+.modal-share__title {
+    color: transparent;
+    font-size: 1.4rem;
+}
+
+.modal-icon {
+    background-color: white;
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 4rem;
+    width: 100%;
+}
+
+.icon-icon-twitter {
+    background-color: transparent;
+}
+
+.modal-icon:active {
+    opacity: 85%;
+}
