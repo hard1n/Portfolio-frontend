@@ -1,0 +1,60 @@
+.main-container {
+    background-size: 50%;
+    background-position: bottom left;
+    margin: 0 auto  ;
+    padding: 30px 50px;
+    height: 100vh;
+}
+
+.testimonial {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.comment-section {
+    margin: auto 0 auto 50px;
+    order: 0;
+}
+
+.user-profile {
+    order: 1;
+    height: 85vh;
+    width: 100%;
+}
+
+.user__picture-wrapper {
+    height: 70vh;
+}
+
+.user__picture {
+    height: inherit;
+}
+
+.testimonial__nav {
+    left: calc(20% - 35px);
+}
+
+.button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.user-comment {
+    background-position: 18% -5%;
+    font-size: 2.5rem;
+    min-width: 508px;
+    text-align: left;
+    position: relative;
+    height: 270px;
+    z-index: 0;
+}
+
+.user-info {
+    display: flex;
+}
+
+.user-profession {
+    margin-left: 5px;
+}
