@@ -10,12 +10,7 @@
     display: grid;
     grid-template-columns: 40% 60%;
     margin: 0 auto;
-    max-width: 1000px;
-}
-
-.comment-section {
-    margin: auto 0 auto 50px;
-    order: 0;
+    max-width: 1020px;
 }
 
 .user-profile {
@@ -41,10 +36,15 @@
     cursor: pointer;
 }
 
+.comment-section {
+    margin: auto 0 auto 50px;
+    order: 0;
+}
+
 .user-comment {
     background-position: 18% -5%;
     font-size: 2.5rem;
-    min-width: 508px;
+    min-width: 495px;
     text-align: left;
     position: relative;
     height: 270px;
