@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/icons/style.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -13,19 +17,26 @@
             <figure>
                 <img src="./assets/imgs/logo.svg" alt="Logo">
             </figure>
-            <div>
-                <span class="icon-document-icon"></span>
-                <span class="icon-folder-icon"></span>
-                <span class="icon-upload-icon"></span>
+            <div class="icons-container">
+                <span class="icon-document-icon icon"></span>
+                <span class="icon-folder-icon icon"></span>
+                <span class="icon-upload-icon icon"></span>
             </div>
         </section>
         <section class="storage-section">
-            <h3>You’ve used 815 GB of your storage</h3>
+            <h3 class="storage-section__title">You’ve used <strong>815 GB</strong> of your storage</h3>
             <div class="storage-used">
                 <div class="storage-bar">
                     <div class="storage-bar__progress"></div>
                 </div>
-                0 GB 1000 GB
+                <div class="storage-counter">
+                    <p class="storage-amount">0 GB</p>
+                    <p class="storage-amount">1000 GB</p>
+                </div>
+            </div>
+            <div class="storage-remaining">
+                <p class="amount-left">185</p>
+                <p class="remaining-label">GB LEFT</p>
             </div>
         </section>
     </main>

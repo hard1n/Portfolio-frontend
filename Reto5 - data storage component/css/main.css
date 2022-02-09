@@ -1,0 +1,130 @@
+:root {
+    --primary-color: hsl(228, 56%, 26%); /*Dark-Blue*/
+    --secundary-color: hsl(229, 57%, 11%); /*Darker-Blue*/
+    --light-color: hsl(243, 100%, 93%); /*Pale-Blue*/
+    --grey-color: hsl(229, 7%, 55%); /*Grayish-Blue*/
+    /* --storage-bar-color: hsl(6, 100%, 80%) to hsl(335, 100%, 65%); Gradient */
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: 62.5%;
+}
+
+.main-container {
+    background-image: url(../assets/imgs/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    height: 100vh;
+}
+
+.files-section {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    padding: 25px 35px;
+    height: 200px;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.icon {
+    background-color: var(--secundary-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 2.3rem;
+    height: 50px;
+    width: 50px;
+}
+
+.storage-section {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 25px 30px;
+    position: relative;
+    height: 150px;
+}
+
+.storage-section__title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.storage-used {
+    /* width: 100%; */
+}
+
+.storage-bar {
+    background-color: var(--secundary-color);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 2px;
+    height: 20px;
+}
+
+.storage-bar__progress {
+    background-color: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 15px;
+    width: 81.5%;
+}
+
+.storage-counter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.storage-amount {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.storage-remaining {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    position: absolute;
+    left: calc(50% - 75px);
+    bottom: -30px;
+    width: 150px;
+}
+
+.amount-left {
+    color: var(--secundary-color);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.remaining-label {
+    color: var(--grey-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
