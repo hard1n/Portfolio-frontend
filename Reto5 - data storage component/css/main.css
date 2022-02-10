@@ -3,7 +3,7 @@
     --secundary-color: hsl(229, 57%, 11%); /*Darker-Blue*/
     --light-color: hsl(243, 100%, 93%); /*Pale-Blue*/
     --grey-color: hsl(229, 7%, 55%); /*Grayish-Blue*/
-    /* --storage-bar-color: hsl(6, 100%, 80%) to hsl(335, 100%, 65%); Gradient */
+    --storage-bar-color: hsl(6, 100%, 80%) to hsl(335, 100%, 65%); Gradient
 }
 
 *, *::after, *::before {
@@ -25,7 +25,7 @@ html {
     flex-direction: column;
     justify-content: center;
     padding: 25px;
-    height: 100vh;
+    height: 600px;
 }
 
 .files-section {
@@ -77,21 +77,32 @@ html {
 }
 
 .storage-used {
-    /* width: 100%; */
+    margin-bottom: 10px;
 }
 
 .storage-bar {
     background-color: var(--secundary-color);
     border-radius: 20px;
+    display: flex;
     margin-bottom: 10px;
     padding: 2px;
     height: 20px;
 }
 
 .storage-bar__progress {
-    background-color: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
-    height: 15px;
+    background: rgb(255,163,153);
+    background: linear-gradient(90deg, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%));
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2px;
     width: 81.5%;
+}
+
+.storage-bar__pointer {
+    background-color: white;
+    border-radius: 50%;
+    width: 12px;
 }
 
 .storage-counter {
@@ -112,9 +123,9 @@ html {
     justify-content: space-evenly;
     padding: 10px;
     position: absolute;
-    left: calc(50% - 75px);
-    bottom: -30px;
-    width: 150px;
+    left: calc(50% - 85px);
+    bottom: -35px;
+    width: 170px;
 }
 
 .amount-left {
@@ -125,6 +136,6 @@ html {
 
 .remaining-label {
     color: var(--grey-color);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
