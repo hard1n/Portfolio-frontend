@@ -3,7 +3,7 @@
     --secundary-color: hsl(229, 57%, 11%); /*Darker-Blue*/
     --light-color: hsl(243, 100%, 93%); /*Pale-Blue*/
     --grey-color: hsl(229, 7%, 55%); /*Grayish-Blue*/
-    --storage-bar-color: hsl(6, 100%, 80%) to hsl(335, 100%, 65%); Gradient
+    /* --storage-bar-color: hsl(6, 100%, 80%) to hsl(335, 100%, 65%); Gradient */
 }
 
 *, *::after, *::before {
@@ -18,14 +18,17 @@ html {
 }
 
 .main-container {
+    background-color: var(--secundary-color);
     background-image: url(../assets/imgs/bg-mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 25px;
     height: 600px;
+    min-width: 375px;
 }
 
 .files-section {
@@ -38,6 +41,8 @@ html {
     margin-bottom: 20px;
     padding: 25px 35px;
     height: 200px;
+    min-width: 320px;
+    max-width: 330px;
 }
 
 .icons-container {
@@ -68,6 +73,8 @@ html {
     padding: 25px 30px;
     position: relative;
     height: 150px;
+    min-width: 320px;
+    max-width: 600px;
 }
 
 .storage-section__title {
@@ -125,6 +132,7 @@ html {
     position: absolute;
     left: calc(50% - 85px);
     bottom: -35px;
+    height: 70px;
     width: 170px;
 }
 
