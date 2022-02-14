@@ -1,0 +1,114 @@
+:root {
+    --dark-gray: hsl(0, 0%, 63%);
+    --very-dark-gray: hsl(0, 0%, 27%);
+    --black-color: hsl(0, 0%, 0%);
+    White: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Spartan', sans-serif;
+    font-size: 62.5%;
+}
+
+.backgd-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-section {
+    background-image: url(../assets/imgs/mobile-image-hero-1.jpg);
+    padding: 35px 25px;
+    position: relative;
+    height: 350px;
+    width: 100%;
+}
+
+/* .header {
+    display: flex;
+    justify-content: center;
+} */
+
+.header__main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.open-menu-btn {
+    position: absolute;
+    top: calc(50% - 7px);
+    left: 0;
+}
+
+.menu-icon {
+    color: var(--dark-gray);
+    font-size: 1.4rem;
+}
+
+.title {
+    color: #fff;
+    font-weight: 600;
+}
+
+.nav-bar {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 100%;
+}
+
+.nav-bar__list {
+    color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    list-style: none;
+    margin-left: 30px;
+    width: 90%;
+}
+
+.nav-buttons {
+    background-color: #000;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 100px;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    width: 50%;
+}
+
+.active {
+    display: block;
+}
+
+/*** Shop Section ***/
+.shop-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px 25px;
+    height: 400px;
+}
+.shop__title {
+    color: #000;
+    font-size: 3rem;
+}
+
+.shop__description {
+    color: var(--dark-gray);
+    font-size: 1.2rem;
+}
