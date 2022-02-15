@@ -22,18 +22,13 @@ html {
     background-size: cover;
 }
 
-.main-section {
+.home-section {
     background-image: url(../assets/imgs/mobile-image-hero-1.jpg);
-    padding: 35px 25px;
     position: relative;
+    padding: 35px 25px;
     height: 350px;
     width: 100%;
 }
-
-/* .header {
-    display: flex;
-    justify-content: center;
-} */
 
 .header__main {
     display: flex;
@@ -58,11 +53,21 @@ html {
 }
 
 .nav-bar {
-    display: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: 200ms ease-in-out;
     height: 100px;
     width: 100%;
+}
+
+.nav-bar.active {
+    transform: scale(1);
 }
 
 .nav-bar__list {
@@ -70,9 +75,10 @@ html {
     display: flex;
     justify-content: space-evenly;
     font-size: 1.2rem;
+    font-weight: 700;
     list-style: none;
     margin-left: 30px;
-    width: 90%;
+    width: 80%;
 }
 
 .nav-buttons {
@@ -91,9 +97,10 @@ html {
     width: 50%;
 }
 
-.active {
-    display: block;
+.button:active {
+    background-color: var(--very-dark-gray);
 }
+
 
 /*** Shop Section ***/
 .shop-section {
@@ -108,7 +115,53 @@ html {
     font-size: 3rem;
 }
 
-.shop__description {
+.description {
     color: var(--dark-gray);
     font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.shop__button {
+    background-color: white;
+    border: none;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 10px;
+    text-align: left;
+}
+
+.shop__button:active {
+    color: var(--dark-gray);
+}
+
+.icon-arrow {
+    margin-left: 15px;
+}
+
+/** About us Section **/
+.image {
+    height: 250px;
+}
+
+.about-us__dark {
+    background-image: url(../assets/imgs/image-about-dark.jpg);
+}
+
+.about-us__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 25px 10px;
+}
+
+.about-us__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.about-us__light {
+    background-image: url(../assets/imgs/image-about-light.jpg);
 }
