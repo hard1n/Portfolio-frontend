@@ -36,10 +36,20 @@ html {
     position: relative;
 }
 
-.open-menu-btn {
+.nav-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.open-menu {
     position: absolute;
     top: calc(50% - 7px);
     left: 0;
+}
+
+.close-menu {
+    height: 35px;
+    width: 35px;
 }
 
 .menu-icon {
@@ -52,21 +62,36 @@ html {
     font-weight: 600;
 }
 
+.bg-modal {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .nav-bar {
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     position: absolute;
     top: 0;
     left: 0;
     transform: scale(0);
-    transition: 200ms ease-in-out;
+    transition: 200ms ease;
     height: 100px;
     width: 100%;
 }
 
-.nav-bar.active {
+.bg-active {
+    display: block;
+}
+
+.nav-bar.nav-active {
     transform: scale(1);
 }
 
@@ -77,7 +102,7 @@ html {
     font-size: 1.2rem;
     font-weight: 700;
     list-style: none;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     width: 80%;
 }
 
@@ -104,6 +129,7 @@ html {
 
 /*** Shop Section ***/
 .shop-section {
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,6 +176,7 @@ html {
 }
 
 .about-us__content {
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
