@@ -5,7 +5,9 @@
 }
 
 .home-section {
+    background-image: url(../assets/imgs/desktop-image-hero-1.jpg);
     height: inherit;
+    padding: 50px 60px;
 }
 
 .open-menu,
@@ -17,6 +19,7 @@
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
+    width: 400px;
 }
 
 .header__main {
@@ -31,15 +34,41 @@
     height: auto;
 }
 
+.nav-bar__list {
+    color: #fff;
+    font-weight: 500;
+}
+
+.list-item{
+    padding: 5px 0;
+}
+
+.list-item:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #fff;
+    /* width: 20px; */
+}
+
+/** Shop section **/
+
 .slides-buttons {
     right: -140px;
     height: 65px;
     width: 140px;
 }
 
+.button:hover {
+    background-color: var(--very-dark-gray);
+    cursor: pointer;
+}
+
 .shop-section {
     padding: 100px 80px;
     height: inherit;
+}
+
+.shop__title {
+    font-size: 3.5rem;
 }
 
 .description {
@@ -48,12 +77,29 @@
     height: auto;
 }
 
+.shop__button {
+    width: 275px;
+    border-right : 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.shop__button:hover {
+    color: var(--dark-gray);
+    cursor: pointer;
+}
+
+.shop__button:active {
+    border-right : 1px solid var(--dark-gray);
+    border-bottom: 1px solid var(--dark-gray);
+    color: var(--dark-gray);
+}
+
+/**About us Section**/
 .about-us {
     display: grid;
     grid-template-columns: 30% 40% 30%;
-    height: 30vh;
 }
 
 .about-us__content {
-    padding: 50px;
+    padding: 30px 50px 0;
 }
