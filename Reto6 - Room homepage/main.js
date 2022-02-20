@@ -1,4 +1,4 @@
-/** Nav menú **/
+/**** Nav menú ****/
 const navOpenBtn = document.getElementById("nav-open");
 const navCloseBtn = document.getElementById("nav-close");
 const bgModal = document.querySelector(".bg-modal");
@@ -14,7 +14,7 @@ navCloseBtn.addEventListener('click', function () {
     navBar.classList.remove("nav-active");
 });
 
-/** Shop slider **/
+/**** Shop slider ****/
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 const shopTitle = document.getElementById("shop-title1");
@@ -23,8 +23,24 @@ const homeSection = document.querySelector(".home-section");
 const windowSize = window.visualViewport;
 
 prevBtn.addEventListener('click', function() {
-    bgImgDesktop()
+    bgImgDesktop();
+    prevSlide();
+});
 
+nextBtn.addEventListener('click', function() {
+    bgImgDesktop();
+    nextSlide();
+});
+
+function bgImgDesktop() {
+    if (windowSize.width >= 800) {
+        slide1.img = "url(./assets/imgs/desktop-image-hero-1.jpg)";
+        slide2.img = "url(./assets/imgs/desktop-image-hero-2.jpg)";
+        slide3.img = "url(./assets/imgs/desktop-image-hero-3.jpg)";
+    }
+}
+
+function prevSlide() {
     if (shopTitle.id === "shop-title3") {
         homeSection.style.backgroundImage = slide2.img;
         shopTitle.id = slide2.id;
@@ -43,11 +59,9 @@ prevBtn.addEventListener('click', function() {
         shopTitle.textContent = slide3.title;
         shopDescription.textContent = slide3.content;
     }
-});
+}
 
-nextBtn.addEventListener('click', function() {
-    bgImgDesktop()
-
+function nextSlide() {
     if (shopTitle.id === "shop-title1") {
         homeSection.style.backgroundImage = slide2.img;
         shopTitle.id = slide2.id;
@@ -65,15 +79,6 @@ nextBtn.addEventListener('click', function() {
         shopTitle.id = slide1.id;
         shopTitle.textContent = slide1.title;
         shopDescription.textContent = slide1.content;
-    }
-});
-
-
-function bgImgDesktop() {
-    if (windowSize.width >= 800) {
-        slide1.img = "url(./assets/imgs/desktop-image-hero-1.jpg)";
-        slide2.img = "url(./assets/imgs/desktop-image-hero-2.jpg)";
-        slide3.img = "url(./assets/imgs/desktop-image-hero-3.jpg)";
     }
 }
 
