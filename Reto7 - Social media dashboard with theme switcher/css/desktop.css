@@ -1,0 +1,45 @@
+.header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 120px ;
+    padding-bottom: 160px;
+}
+
+.header__description,
+.header__dark-mode {
+    align-items: center;
+    border-bottom: none;
+    padding : 0;
+}
+
+.header__subtitle,
+.dm__label {
+    font-size: 2rem;
+}
+
+.dashboard {
+    display: block;
+    margin: 90px 120px;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px 35px;
+    margin: 25px 0;
+    width: 100%;
+}
+
+.ov__card {
+    margin: 0;
+}
+
+.dm__switched {
+    margin-left: 15px;
+}
+
+.dm__switched:hover {
+    background-color: hsl(228, 12%, 44%);
+    cursor: pointer;
+    transform: scale(1.05);
+}
