@@ -78,7 +78,8 @@ html {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 26px;
+    transition: 200ms ease-in-out;
+    height: 28px;
     width: 50px;
 }
 
@@ -172,13 +173,13 @@ html {
     letter-spacing: 0.5rem;
 }
 
-.card__footer {
+.tendency-container {
     display: flex;
     align-items: center;
 }
 
 .card__tendency {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     margin-left: 5px;
     text-align: center;
@@ -231,18 +232,4 @@ html {
     color: var(--primary-text-color);
     font-size: 3rem;
     font-weight: 700;
-}
-
-.ov-card__tendency {
-    font-size: 1.4rem;
-    font-weight: 700;
-    align-self: center;
-}
-
-.ov-card__tendency.up {
-    color: var(--tendency-green);
-}
-
-.ov-card__tendency.down {
-    color: var(--tendency-red);
 }

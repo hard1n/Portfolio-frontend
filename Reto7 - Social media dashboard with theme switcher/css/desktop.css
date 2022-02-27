@@ -39,7 +39,9 @@
 }
 
 .dm__switched:hover {
-    background-color: hsl(228, 12%, 44%);
+    /* background-color: hsl(228, 12%, 44%); */
+    background: rgb(55,143,230);
+    background: linear-gradient(90deg, rgba(55,143,230,1) 0%, rgba(62,218,130,1) 100%);
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.2);
 }
