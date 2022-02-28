@@ -1,0 +1,25 @@
+:root {
+    --primary-color: hsl(180, 29%, 50%);
+    --bg-color: hsl(180, 52%, 96%);
+    --light-blue: hsl(180, 31%, 95%);
+    --gray-color: hsl(180, 8%, 52%);
+    --dark-grey-color: hsl(180, 14%, 20%);
+    /* //Primary
+    --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+    //Neutral
+    --Light-Grayish-Cyan (Background): hsl(180, 52%, 96%);
+    --Light-Grayish-Cyan (Filter Tablets): hsl(180, 31%, 95%);
+    --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+    --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%); */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Spartan', sans-serif;
+    font-size: 62.5%;
+}
