@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/icons/style.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/desktop.css">
     <script defer src="./main.js"></script>
@@ -14,8 +15,11 @@
 </head>
 <body>
     <header class="header">
-
     </header>
+    <section class="filter-section">
+        <button class="filter__btn btn-filter">FILTROS <span class="icon-filter_list"></span><span class="filter__aplied"></span>0</button>
+        <button class="filter__clear btn-filter"><span class="filter__cont"></span><span class="icon-cancel"></span>CLEAR</button>
+    </section>
     <main class="main-container">
         <article class="card tag-new">
             <header class="company">
@@ -24,13 +28,50 @@
             </header>
             <section class="info-section">
                 <h3 class="card__title">Senior Frontend Developer</h3>
-                <p>
+                <p class="card__job-details">
                     <span id="date-uploaded">1d ago</span>
                     <span id="work-time">Full Time</span>
                     <span id="work-location">USA only</span>
                 </p>
-                <footet class="skillset"></footet>
             </section>
+            <footer class="card__skillset">
+                <button class="btn-display-skillset">
+                    <span class="btn-display__icon icon-expand_more"></span>
+                </button>
+                <div class="skills-container">
+                    <button class="btn-skill">Frontend</button>
+                    <button class="btn-skill">Senior</button>
+                    <button class="btn-skill">HTML</button>
+                    <button class="btn-skill">CSS</button>
+                    <button class="btn-skill">JavaScript</button>
+                </div>
+            </footer>
+        </article>
+        <article class="card tag-new">
+            <header class="company">
+                <img src="./assets/imgs/photosnap.svg" alt="" class="company__logo">
+                <h2 class="company__name">Photosnap</h2>
+            </header>
+            <section class="info-section">
+                <h3 class="card__title">Senior Frontend Developer</h3>
+                <p class="card__job-details">
+                    <span id="date-uploaded">1d ago</span>
+                    <span id="work-time">Full Time</span>
+                    <span id="work-location">USA only</span>
+                </p>
+            </section>
+            <footer class="card__skillset">
+                <button class="btn-display-skillset">
+                    <span class="btn-display__icon icon-expand_more"></span>
+                </button>
+                <div class="skills-container">
+                    <button class="btn-skill">Frontend</button>
+                    <button class="btn-skill">Senior</button>
+                    <button class="btn-skill">HTML</button>
+                    <button class="btn-skill">CSS</button>
+                    <button class="btn-skill">JavaScript</button>
+                </div>
+            </footer>
         </article>
     </main>
 </body>

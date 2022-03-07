@@ -27,6 +27,52 @@ html{
 .main-container {
     padding: 25px;
     background-color: var(--bg-color);
+    height: 100vh;
+}
+
+.header {
+    background-color: var(--primary-color);
+    background-image: url(../assets/imgs/bg-header-mobile.svg);
+    height: 150px;
+}
+
+.filter-section {
+    background-color: #fff;
+    /* border-top: 1px solid var(--gray-color); */
+    /* border-bottom: 1px solid var(--gray-color); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 25px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.btn-filter {
+    background-color: #fff;
+    border: 1px solid transparent;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 10px;
+    height: inherit;
+    width: 50%;
+}
+
+.btn-filter:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.filter__clear {
+    /* display: flex;
+    justify-content: space-between;
+    width: 100px; */
 }
 
 .card {
@@ -36,7 +82,8 @@ html{
     margin: 30px 0;
     padding: 40px 20px 30px;
     position: relative;
-    height: 250px;
+    transition: 500ms;
+    height: 200px;
 }
 
 .card.tag-new {
@@ -65,4 +112,60 @@ html{
 .card__title {
     color: var(--dark-grey-color);
     font-size: 1.8rem;
+}
+
+.card__job-details {
+    font-size: 1.4rem;
+    color: var(--gray-color);
+    margin-top: 10px;
+}
+
+.card__skillset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.btn-display-skillset {
+    background-color: transparent;
+    border: none;
+    color: var(--gray-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    font-size: 3.5rem;
+    width: 50px;
+}
+
+.btn-display-skillset:active {
+    color: var(--dark-grey-color);
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    transition: 400ms;
+    transform: scale(0);
+    width: 100%;
+}
+
+.btn-skill {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 5px;
+    padding: 10px;
+}
+
+.card.display {
+    height: 300px;
+}
+
+.active {
+    transform: scale(1);
 }

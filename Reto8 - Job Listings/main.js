@@ -1,5 +1,27 @@
 const c = console.log;
 
+const card = document.querySelector('.card');
+const skillsContainer = document.querySelector('.skills-container');
+const btnCardDisplay = document.querySelector('.btn-display-skillset');
+const btnIcon = document.querySelector('.btn-display__icon');
+
+btnCardDisplay.addEventListener('click', function(){
+    if(skillsContainer.classList.length == 1) {
+        card.classList.add('display');
+        skillsContainer.classList.add('active')
+        btnCardDisplay.style.color = 'var(--dark-grey-color)';
+        btnIcon.classList.remove('icon-expand_more');
+        btnIcon.classList.add('icon-expand_less');
+    }
+    else {
+        card.classList.remove('display');
+        skillsContainer.classList.remove('active')
+        btnCardDisplay.style.color = 'var(--gray-color)';
+        btnIcon.classList.remove('icon-expand_less');
+        btnIcon.classList.add('icon-expand_more');
+    }
+})
+
 const jobs = [
     {
         id: 1,
