@@ -40,3 +40,11 @@
 .icon-filter_list:before {
   content: "\e903";
 }
+
+.icon-add:before {
+  content: "\e906";
+}
+
+.icon-remove:before {
+  content: "\e905";
+}

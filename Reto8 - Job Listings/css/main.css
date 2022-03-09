@@ -41,31 +41,32 @@ html{
     /* border-top: 1px solid var(--gray-color); */
     /* border-bottom: 1px solid var(--gray-color); */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     height: 50px;
-    padding: 0 25px;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 .btn-filter {
     background-color: #fff;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     color: var(--primary-color);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    font-size: 1.6rem;
+    justify-content: space-between;
+    font-size: 1.4rem;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    padding: 10px;
+    letter-spacing: 1px;
+    padding: 10px 25px;
     height: inherit;
-    width: 50%;
+    text-align: left;
+    width: 175px;
 }
 
-.btn-filter:hover {
+.btn-filter:active {
     border-bottom: 2px solid var(--primary-color);
 }
 
@@ -73,6 +74,36 @@ html{
     /* display: flex;
     justify-content: space-between;
     width: 100px; */
+    justify-content: flex-end;
+}
+
+.btn-icon {
+    font-size: 2rem;
+}
+
+/** Filters Modal **/
+.filter__bg-modal {
+    background-color: rgba(0, 0, 0, 0.20);
+    color: #000;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+
+.filter__modal {
+    background-color: #fff;
+    font-size: 2rem;
+    padding: 20px;
+    width: 80%;
+    height: 100vh;
+}
+
+.modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card {
