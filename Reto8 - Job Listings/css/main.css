@@ -95,15 +95,30 @@ html{
 .filter__modal {
     background-color: #fff;
     font-size: 2rem;
-    padding: 20px;
     width: 80%;
     height: 100vh;
 }
 
 .modal__header {
+    border-bottom: 1px solid lightgray;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
+}
+
+.modal__filters-container {
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.filter-item {
+    border-bottom: 1px solid lightgray;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px 0;
 }
 
 .card {
