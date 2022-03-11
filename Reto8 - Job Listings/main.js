@@ -4,6 +4,9 @@ const card = document.querySelector('.card');
 const skillsContainer = document.querySelector('.skills-container');
 const btnCardDisplay = document.querySelector('.btn-display-skillset');
 const btnIcon = document.querySelector('.btn-display__icon');
+const bgModal = document.querySelector('.filters__bg-modal');
+const filtersModal = document.querySelector('.filters__modal');
+const btnCloseModal = document.querySelector('.close-modal');
 
 btnCardDisplay.addEventListener('click', function(){
     if(skillsContainer.classList.length == 1) {
@@ -20,7 +23,16 @@ btnCardDisplay.addEventListener('click', function(){
         btnIcon.classList.remove('icon-expand_less');
         btnIcon.classList.add('icon-expand_more');
     }
-})
+});
+
+btnCloseModal.addEventListener('click', function(){
+    if(bgModal.classList.length){
+
+    }
+    else {
+        
+    }
+});
 
 const jobs = [
     {

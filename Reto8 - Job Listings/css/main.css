@@ -82,8 +82,9 @@ html{
 }
 
 /** Filters Modal **/
-.filter__bg-modal {
+.filters__bg-modal {
     background-color: rgba(0, 0, 0, 0.20);
+    display: none;
     color: #000;
     position: fixed;
     top: 0;
@@ -92,9 +93,11 @@ html{
     z-index: 2;
 }
 
-.filter__modal {
+.filters__modal {
     background-color: #fff;
     font-size: 2rem;
+    transition: 200ms ease;
+    transform: scale(0);
     width: 80%;
     height: 100vh;
 }
@@ -105,6 +108,12 @@ html{
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+}
+
+.close-modal {
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
 }
 
 .modal__filters-container {
@@ -121,6 +130,13 @@ html{
     padding: 10px 0;
 }
 
+.item__show-more-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+/** Job Card **/
 .card {
     background-color: #fff;
     box-shadow: 0px 10px 12px rgba(131, 149, 149, 0.15);
@@ -213,5 +229,6 @@ html{
 }
 
 .active {
+    display: block;
     transform: scale(1);
 }
