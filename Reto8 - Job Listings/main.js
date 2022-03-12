@@ -4,9 +4,12 @@ const card = document.querySelector('.card');
 const skillsContainer = document.querySelector('.skills-container');
 const btnCardDisplay = document.querySelector('.btn-display-skillset');
 const btnIcon = document.querySelector('.btn-display__icon');
+const btnOpenFilters = document.querySelector('.filter__btn');
 const bgModal = document.querySelector('.filters__bg-modal');
 const filtersModal = document.querySelector('.filters__modal');
-const btnCloseModal = document.querySelector('.close-modal');
+const btnCloseFilters = document.querySelector('.close-modal');
+const filterItem = document.querySelectorAll('.filter-item')
+const btnFilterItem = document.querySelector('.filter-item__btn');
 
 btnCardDisplay.addEventListener('click', function(){
     if(skillsContainer.classList.length == 1) {
@@ -25,13 +28,19 @@ btnCardDisplay.addEventListener('click', function(){
     }
 });
 
-btnCloseModal.addEventListener('click', function(){
-    if(bgModal.classList.length){
+btnOpenFilters.addEventListener('click', function(){
+    bgModal.classList.add('active');
+    filtersModal.classList.add('filters-active');
+});
 
-    }
-    else {
-        
-    }
+btnCloseFilters.addEventListener('click', function(){
+    bgModal.classList.remove('active');
+    filtersModal.classList.remove('filters-active');
+});
+
+btnFilterItem.addEventListener('click', function(){
+    c(filterItem);
+    filterItem.classList.add('item-active');
 });
 
 const jobs = [
