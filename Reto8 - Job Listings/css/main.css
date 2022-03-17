@@ -85,8 +85,10 @@ html{
 .filters__bg-modal {
     background-color: rgba(0, 0, 0, 0.20);
     color: #000;
+    /* display: none; */
     position: fixed;
     top: 0;
+    transition: 10ms;
     transform: scale(0);
     height: 100vh;
     width: 100%;
@@ -124,6 +126,12 @@ html{
     padding: 20px;
 }
 
+.filter-item {
+    height: 44px;
+    transition: 500ms;
+    overflow: hidden;
+}
+
 .filter-item__btn {
     background-color: transparent;
     border: none;
@@ -137,8 +145,16 @@ html{
     width: 100%;
 }
 
-.item-active {
-    height: 150px;
+.select-menu {
+    color: var(--dark-grey-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    padding-left: 20px;
+}
+
+.filter-item__active {
+    height: auto;
 }
 
 /** Job Card **/
@@ -212,6 +228,7 @@ html{
 .skills-container {
     display: flex;
     flex-wrap: wrap;
+    /* justify-content: center; */
     transition: 400ms;
     transform: scale(0);
     width: 100%;
@@ -239,7 +256,6 @@ html{
 
 .filters-active {
     /* display: block; */
-    
     left: 0;
     /* display: block;
     transform: scale(1); */

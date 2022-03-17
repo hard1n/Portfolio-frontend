@@ -8,8 +8,14 @@ const btnOpenFilters = document.querySelector('.filter__btn');
 const bgModal = document.querySelector('.filters__bg-modal');
 const filtersModal = document.querySelector('.filters__modal');
 const btnCloseFilters = document.querySelector('.close-modal');
-const filterItem = document.querySelectorAll('.filter-item')
-const btnFilterItem = document.querySelector('.filter-item__btn');
+//Filter items
+const btnItemCompany = document.getElementById('filter-item__company');
+const btnItemPosition = document.getElementById('filter-item__position-title');
+const btnItemTech = document.getElementById('filter-item__tech');
+
+function filterDisplay(element) {
+    element.parentElement.classList.add('filter-item__active');
+}
 
 btnCardDisplay.addEventListener('click', function(){
     if(skillsContainer.classList.length == 1) {
@@ -38,9 +44,18 @@ btnCloseFilters.addEventListener('click', function(){
     filtersModal.classList.remove('filters-active');
 });
 
-btnFilterItem.addEventListener('click', function(){
-    c(filterItem);
-    filterItem.classList.add('item-active');
+/** Filter Items display **/
+btnItemCompany.addEventListener('click', function(){
+    // c(btnItemCompany.parentElement.classList);
+    filterDisplay(btnItemCompany);
+});
+
+btnItemPosition.addEventListener('click', function(){
+    filterDisplay(btnItemPosition);
+});
+
+btnItemTech.addEventListener('click', function(){
+    filterDisplay(btnItemTech);
 });
 
 const jobs = [

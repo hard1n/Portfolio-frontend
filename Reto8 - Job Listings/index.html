@@ -17,35 +17,77 @@
     <header class="header">
     </header>
     <section class="filter-section">
-        <button class="filter__btn btn-filter">FILTROS <span class="btn-icon icon-filter_list"></span><span class="filter__aplied">[0]</span></button>
+        <button class="filter__btn btn-filter">FILTERS <span class="btn-icon icon-filter_list"></span><span class="filter__aplied">[0]</span></button>
         <button class="filter__clear btn-filter"><span class="filter__cont"></span><span class="btn-icon icon-cancel"></span>CLEAR</button>
     </section>
-    <section class="filters__bg-modal">
-        <div class="filters__modal">
+    <section class="filters__bg-modal active">
+        <div class="filters__modal filters-active">
             <header class="modal__header">
-                <h2>Filters</h2>
+                <h2>Filters</h2> 
                 <button class="close-modal">
                     <span class="icon-close"></span>
                 </button>
             </header>
             <div class="modal__filters-section">
-                <div class="filter-item">
-                    <button class="filter-item__btn" id="modal__company">
+                <div class="filter-item" id="item__company">
+                    <button class="filter-item__btn" id="filter-item__company">
                         <p class="item__title">Company</p>
                         <span class="icon-add"></span>
                     </button>
+                    <div class="select-menu">
+                        <label for="">
+                            <input type="checkbox" class="menu__check" value="Photosnap"/>
+                            <label for="photosnap">Photosnap</label>
+                        </label>
+                        <label for="">
+                            <input type="checkbox" class="menu__check" value="Photosnap"/>
+                            <label for="photosnap">Photosnap</label>
+                        </label>
+                        <label for="">
+                            <input type="checkbox" class="menu__check" value="Photosnap"/>
+                            <label for="photosnap">Photosnap</label>
+                        </label>
+                    </div>
                 </div>
-                <div class="filter-item">
-                    <button class="filter-item__btn" id="modal__position-title">
+                <div class="filter-item" id="item__position-tile">
+                    <button class="filter-item__btn" id="filter-item__position-title">
                         <p class="item__title">Position Title</p>
                         <span class="icon-add"></span>
                     </button>
+                    <div class="select-menu">
+                        <label for="">
+                            <input type="checkbox" class="menu__check" value="Photosnap"/>
+                            <label for="photosnap">Frontend Junior</label>
+                        </label>
+                        <label for="">
+                            <input type="checkbox" class="menu__check" value="Photosnap"/>
+                            <label for="photosnap">Frontend Senior</label>
+                        </label>
+                        <label for="">
+                            <input type="checkbox" class="menu__check" value="Photosnap"/>
+                            <label for="photosnap">Fullstack</label>
+                        </label>
+                    </div>
                 </div>
-                <div class="filter-item">
-                    <button class="filter-item__btn" id="modal__tech">
+                <div class="filter-item" id="item__technology">
+                    <button class="filter-item__btn" id="filter-item__tech">
                         <p class="item__title">Technology</p>
                         <span class="icon-add"></span>
                     </button>
+                    <div class="select-menu">
+                        <label for="">
+                            <input type="checkbox" class="menu__check" value="Photosnap"/>
+                            <label for="photosnap">HTML</label>
+                        </label>
+                        <label for="">
+                            <input type="checkbox" class="menu__check" value="Photosnap"/>
+                            <label for="photosnap">CSS</label>
+                        </label>
+                        <label for="">
+                            <input type="checkbox" class="menu__check" value="Photosnap"/>
+                            <label for="photosnap">JavaScript</label>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
