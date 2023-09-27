@@ -1,5 +1,3 @@
-const c = console.log;
-
 const card = document.querySelector(".card");
 const skillsContainer = document.querySelector(".skills-container");
 const btnCardDisplay = document.querySelector(".btn-display-skillset");
@@ -21,8 +19,8 @@ function filterDisplay(element) {
   }
 }
 
-/** Create articles funciont**/
-const $container = document.querySelector(".main-container");
+/** Create articles dynamically **/
+const $container = document.querySelector(".cards-container");
 const $template = document.getElementById("card-template");
 const $fragment = document.createDocumentFragment();
 
@@ -31,20 +29,41 @@ fetch("./data.json")
   .then((data) => {
     console.log(data);
     data.forEach((el) => {
+      console.log(el);
       const $clone = $template.content.cloneNode(true);
-      const tags = [el.role, ...el.languages];
-      // console.log(btnTags);
+      const tags = [el.role, el.level, ...el.languages];
+      /** Adding tags to the card **/
+      if (el.new) {
+        const $span = document.createElement("span");
+        $span.textContent = "NEW!";
+        $span.classList.add("tag", "new-tag");
+        $clone
+          .querySelector(".card__header")
+          .insertAdjacentElement("beforeend", $span);
+      }
+      if (el.featured) {
+        const $span = document.createElement("span");
+        $span.textContent = "FEATURED";
+        $span.classList.add("tag", "featured-tag");
+        $clone.querySelector("article").classList.add("featured");
+        $clone
+          .querySelector(".card__header")
+          .insertAdjacentElement("beforeend", $span);
+      }
+      /*** Adding info to the card ***/
       $clone.querySelector("img").setAttribute("src", el.logo);
       $clone.querySelector(".company__name").textContent = el.company;
       $clone.querySelector(".card__title").textContent = el.position;
       $clone.querySelector("#posted-at").textContent = el.postedAt;
       $clone.querySelector("#contract").textContent = el.contract;
       $clone.querySelector("#job-location").textContent = el.location;
-      // Creating Tag-btns
+      //* Data attributes to the btn *//
+      //* Creating Tag-btns *//
       tags.forEach((tag) => {
         const $btnTag = document.createElement("button");
         $btnTag.classList.add("btn-skill");
         $btnTag.textContent = tag;
+        $btnTag.dataset.tag = tag;
         $clone
           .querySelector(".skills-container")
           .insertAdjacentElement("beforeend", $btnTag);
@@ -56,81 +75,52 @@ fetch("./data.json")
   })
   .catch((error) => console.error("Error:", error));
 
-// document.addEventListener("DOMContentLoaded", getData);
-// const newArticle = document.createElement("article");
-// const newHeader = document.createElement("header");
-// const newImg = document.createElement("img");
-// const newTitle = document.createElement("h2");
-// const newSection = document.createElement("section");
-// const newParagraph = document.createElement("");
-// const newFooter = document.createElement("footer");
-
-// newHeader.append(newImg, newTitle);
-// newArticle.append(newHeader, newSection, newFooter);
-
-// const articlesContainer = document.querySelector(".main-container");
-// articlesContainer.appendChild(newArticle);
-
-// function createArticle {
-//     <article class="card tag-new">
-//             <header class="company">
-//                 <img src="./assets/imgs/photosnap.svg" alt="" class="company__logo">
-//                 <h2 class="company__name">Photosnap</h2>
-//             </header>
-//             <section class="info-section">
-//                 <p class="card__title">Senior Frontend Developer</p>
-//                 <p class="card__job-details">
-//                     <span id="date-uploaded">1d ago</span>
-//                     <span id="work-time">Full Time</span>
-//                     <span id="work-location">USA only</span>
-//                 </p>
-//             </section>
-//             <footer class="card__skillset">
-//                 <button class="btn-display-skillset">
-//                     <span class="btn-display__icon icon-expand_more"></span>
-//                 </button>
-//                 <div class="skills-container">
-//                     <button class="btn-skill">Frontend</button>
-//                     <button class="btn-skill">Senior</button>
-//                     <button class="btn-skill">HTML</button>
-//                     <button class="btn-skill">CSS</button>
-//                     <button class="btn-skill">JavaScript</button>
-//                 </div>
-//             </footer>
-//         </article>
-// }
-
+/*** Global Click Event ***/
 document.addEventListener("click", (e) => {
   // console.log(e.target.closest("article").querySelector(".skills-container"));
+  /** Open Card **/
   if (e.target.matches(`.btn-display-skillset, .btn-display-skillset *`)) {
-    const thisContainer = e.target
-      .closest("article")
-      .querySelector(".skills-container");
     const thisArticle = e.target.closest("article");
+    const thisContainer = thisArticle.querySelector(".skills-container");
+    const thisOpenBtn = thisArticle.querySelector(".btn-display-skillset");
     if (thisContainer.classList.length == 1) {
       // card.classList.add("display");
       thisContainer.classList.add("active");
-      thisArticle.querySelector("button").style.color =
-        "var(--dark-grey-color)";
-      e.target.querySelector("span").classList.remove("icon-expand_more");
-      e.target.querySelector("span").classList.add("icon-expand_less");
+      thisOpenBtn.style.color = "var(--dark-grey-color)";
+      thisOpenBtn.querySelector("span").classList.remove("icon-expand_more");
+      thisOpenBtn.querySelector("span").classList.add("icon-expand_less");
     } else {
       // card.classList.remove("display");
       thisContainer.classList.remove("active");
-      thisArticle.querySelector("button").style.color = "var(--gray-color)";
-      e.target.querySelector("span").classList.remove("icon-expand_less");
-      e.target.querySelector("span").classList.add("icon-expand_more");
+      thisOpenBtn.style.color = "var(--gray-color)";
+      thisOpenBtn.querySelector("span").classList.remove("icon-expand_less");
+      thisOpenBtn.querySelector("span").classList.add("icon-expand_more");
     }
+  }
+
+  /*** Filtering by Btns-tags ***/
+  if (e.target.matches(".btn-skill")) {
+    const $selectedContainer = document.querySelector(".selected-container");
+    const $tagTemplate = document.getElementById("selct-tag-template");
+    const $clone = $tagTemplate.content.cloneNode(true);
+    $clone.querySelector("span").textContent = e.target.dataset.tag;
+    $clone.querySelector("div").classList.add("btn-skill", "selected-tag");
+    $clone.querySelector("button").classList.add("remove-tag");
+    $selectedContainer.appendChild($clone);
+  }
+  /*** Remove Btns-tags ***/
+  if (e.target.matches(".remove-tag")) {
+    console.log(e.target.closest(".selected-tag"));
+    e.target.closest(".selected-tag").remove();
   }
 });
 
-btnCardDisplay.addEventListener("click", function () {});
+// btnCardDisplay.addEventListener("click", function () {});
 
 btnOpenFilters.addEventListener("click", function () {
   // bgModal.classList.add("active");
   bgModal.classList.add("filters-active");
   // filtersModal.classList.add("filters-active");
-  console.log("Tu maldita madre");
 });
 
 btnCloseFilters.addEventListener("click", function () {

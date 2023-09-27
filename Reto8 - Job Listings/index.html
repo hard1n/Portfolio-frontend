@@ -12,7 +12,11 @@
     />
     <link rel="stylesheet" href="./assets/icons/style.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/desktop.css" />
+    <link
+      rel="stylesheet"
+      href="./css/desktop.css"
+      media="(min-width: 1000px)"
+    />
     <script defer src="./main.js"></script>
     <title>Job List</title>
   </head>
@@ -23,114 +27,156 @@
         FILTERS <span class="btn-icon icon-filter_list"></span
         ><span class="filter__aplied">[0]</span>
       </button>
+      <div class="selected-container">
+        <template id="selct-tag-template">
+          <div>
+            <span></span>
+            <button>X</button>
+          </div>
+        </template>
+      </div>
       <button class="filter__clear btn-filter">
         <span class="filter__cont"></span
         ><span class="btn-icon icon-cancel"></span>CLEAR
       </button>
     </section>
-    <section class="filters__bg-modal">
-      <div class="filters__modal">
-        <header class="modal__header">
-          <h2>Filters</h2>
-          <button class="close-modal">
-            <span class="icon-close"></span>
-          </button>
-        </header>
-        <div class="modal__filters-section">
-          <div class="filter-item" id="item__company">
-            <button class="filter-item__btn" id="filter-item__company">
-              <p class="item__title">Company</p>
-              <span class="icon-add"></span>
+    <main class="main-container">
+      <section class="filters__bg-modal">
+        <div class="filters__modal">
+          <header class="modal__header">
+            <h2>Filters</h2>
+            <button class="close-modal">
+              <span class="icon-close"></span>
             </button>
-            <div class="select-menu">
-              <label for="">
-                <input type="checkbox" class="menu__check" value="Photosnap" />
-                <label for="photosnap">Photosnap</label>
-              </label>
-              <label for="">
-                <input type="checkbox" class="menu__check" value="Photosnap" />
-                <label for="photosnap">Photosnap</label>
-              </label>
-              <label for="">
-                <input type="checkbox" class="menu__check" value="Photosnap" />
-                <label for="photosnap">Photosnap</label>
-              </label>
+          </header>
+          <div class="modal__filters-section">
+            <div class="filter-item" id="item__company">
+              <button class="filter-item__btn" id="filter-item__company">
+                <p class="item__title">Level</p>
+                <span class="icon-add"></span>
+              </button>
+              <div class="select-menu">
+                <label for="">
+                  <input
+                    type="checkbox"
+                    class="menu__check"
+                    value="Photosnap"
+                  />
+                  <label for="photosnap">Photosnap</label>
+                </label>
+                <label for="">
+                  <input
+                    type="checkbox"
+                    class="menu__check"
+                    value="Photosnap"
+                  />
+                  <label for="photosnap">Photosnap</label>
+                </label>
+                <label for="">
+                  <input
+                    type="checkbox"
+                    class="menu__check"
+                    value="Photosnap"
+                  />
+                  <label for="photosnap">Photosnap</label>
+                </label>
+              </div>
             </div>
-          </div>
-          <div class="filter-item" id="item__position-tile">
-            <button class="filter-item__btn" id="filter-item__position-title">
-              <p class="item__title">Position Title</p>
-              <span class="icon-add"></span>
-            </button>
-            <div class="select-menu">
-              <label for="">
-                <input type="checkbox" class="menu__check" value="Photosnap" />
-                <label for="photosnap">Frontend Junior</label>
-              </label>
-              <label for="">
-                <input type="checkbox" class="menu__check" value="Photosnap" />
-                <label for="photosnap">Frontend Senior</label>
-              </label>
-              <label for="">
-                <input type="checkbox" class="menu__check" value="Photosnap" />
-                <label for="photosnap">Fullstack</label>
-              </label>
+            <div class="filter-item" id="item__position-tile">
+              <button class="filter-item__btn" id="filter-item__position-title">
+                <p class="item__title">Position Title</p>
+                <span class="icon-add"></span>
+              </button>
+              <div class="select-menu">
+                <label for="">
+                  <input
+                    type="checkbox"
+                    class="menu__check"
+                    value="Photosnap"
+                  />
+                  <label for="photosnap">Frontend Junior</label>
+                </label>
+                <label for="">
+                  <input
+                    type="checkbox"
+                    class="menu__check"
+                    value="Photosnap"
+                  />
+                  <label for="photosnap">Frontend Senior</label>
+                </label>
+                <label for="">
+                  <input
+                    type="checkbox"
+                    class="menu__check"
+                    value="Photosnap"
+                  />
+                  <label for="photosnap">Fullstack</label>
+                </label>
+              </div>
             </div>
-          </div>
-          <div class="filter-item" id="item__technology">
-            <button class="filter-item__btn" id="filter-item__tech">
-              <p class="item__title">Technology</p>
-              <span class="icon-add"></span>
-            </button>
-            <div class="select-menu">
-              <label for="">
-                <input type="checkbox" class="menu__check" value="Photosnap" />
-                <label for="photosnap">HTML</label>
-              </label>
-              <label for="">
-                <input type="checkbox" class="menu__check" value="Photosnap" />
-                <label for="photosnap">CSS</label>
-              </label>
-              <label for="">
-                <input type="checkbox" class="menu__check" value="Photosnap" />
-                <label for="photosnap">JavaScript</label>
-              </label>
+            <div class="filter-item" id="item__technology">
+              <button class="filter-item__btn" id="filter-item__tech">
+                <p class="item__title">Technology</p>
+                <span class="icon-add"></span>
+              </button>
+              <div class="select-menu">
+                <label for="">
+                  <input
+                    type="checkbox"
+                    class="menu__check"
+                    value="Photosnap"
+                  />
+                  <label for="photosnap">HTML</label>
+                </label>
+                <label for="">
+                  <input
+                    type="checkbox"
+                    class="menu__check"
+                    value="Photosnap"
+                  />
+                  <label for="photosnap">CSS</label>
+                </label>
+                <label for="">
+                  <input
+                    type="checkbox"
+                    class="menu__check"
+                    value="Photosnap"
+                  />
+                  <label for="photosnap">JavaScript</label>
+                </label>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <main class="main-container">
-      <!-- Cards Template -->
-      <template id="card-template">
-        <article class="card tag-new">
-          <header class="company">
-            <img
-              src="./assets/imgs/photosnap.svg"
-              alt="Company Logo"
-              class="company__logo"
-            />
-            <h2 class="company__name">Photosnap</h2>
-          </header>
-          <section class="info-section">
-            <p class="card__title">Senior Frontend Developer</p>
-            <div class="card__job-details">
-              <span id="posted-at">1d ago</span>
-              <span class="dot"></span>
-              <span id="contract">Full Time</span>
-              <span class="dot"></span>
-              <span id="job-location">USA only</span>
-            </div>
-          </section>
-          <footer class="card__skillset">
-            <button class="btn-display-skillset">
-              <span class="btn-display__icon icon-expand_more"></span>
-            </button>
-            <div class="skills-container"></div>
-          </footer>
-        </article>
-      </template>
-      <article class="card tag-new">
+      </section>
+      <section class="cards-container">
+        <!-- Cards Template -->
+        <template id="card-template">
+          <article class="card">
+            <img alt="Company Logo" class="company__logo" />
+            <section class="card__info">
+              <header class="card__header">
+                <h2 class="company__name"></h2>
+              </header>
+              <a href="#" class="card__title"></a>
+              <div class="card__job-details">
+                <span id="posted-at"></span>
+                <span class="dot"></span>
+                <span id="contract"></span>
+                <span class="dot"></span>
+                <span id="job-location"></span>
+              </div>
+            </section>
+            <footer class="card__skillset">
+              <button class="btn-display-skillset">
+                <span class="btn-display__icon icon-expand_more"></span>
+              </button>
+              <div class="skills-container"></div>
+            </footer>
+          </article>
+        </template>
+      </section>
+      <!-- <article class="card tag-new">
         <header class="company">
           <img src="./assets/imgs/photosnap.svg" alt="" class="company__logo" />
           <h2 class="company__name">Photosnap</h2>
@@ -155,7 +201,7 @@
             <button class="btn-skill">JavaScript</button>
           </div>
         </footer>
-      </article>
+      </article> -->
     </main>
   </body>
 </html>

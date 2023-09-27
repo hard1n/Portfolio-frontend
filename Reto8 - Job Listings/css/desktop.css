@@ -1,0 +1,80 @@
+/** General styles **/
+.main-container {
+  display: flex;
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.cards-container {
+  width: 80%;
+}
+
+/*** Filter section ***/
+.filters__bg-modal {
+  /* display: none; */
+  transform: translateX(0);
+  position: sticky;
+  margin-right: 25px;
+  width: 20%;
+}
+
+.filters__modal {
+  box-shadow: none;
+  position: static;
+  /* height: auto; */
+  width: auto;
+}
+
+.close-modal {
+  display: none;
+}
+
+/*** Card style ***/
+.card {
+  display: flex;
+  padding: 2.5rem 1.5rem;
+  /* grid-template-columns: repeat(2, 1fr); */
+}
+
+.btn-display-skillset {
+  display: none;
+}
+
+.company__logo {
+  position: static;
+  height: 90px;
+  width: 90px;
+}
+
+.card__title:hover {
+  color: var(--primary-color);
+}
+
+.card__info {
+  border: none;
+  margin: 0 2rem;
+  width: 50%;
+}
+
+/* Card Footer*/
+.card__skillset {
+  justify-content: center;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Btns effects */
+.skills-container > .btn-skill:hover {
+  /* border: 1px solid var(--primary-color); */
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/*** Selected Filters ***/
+.selcted-tag > button:hover {
+  background-color: var(--dark-grey-color);
+  cursor: pointer;
+}
