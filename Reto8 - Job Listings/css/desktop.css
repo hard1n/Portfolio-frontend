@@ -74,7 +74,7 @@
 }
 
 /*** Selected Filters ***/
-.selcted-tag > button:hover {
+.selected-tag > button:hover {
   background-color: var(--dark-grey-color);
   cursor: pointer;
 }

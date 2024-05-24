@@ -1,0 +1,58 @@
+[
+  {
+    "id": 8,
+    "title": "Job Listings",
+    "description": "Iteractive page where you can filter out jobs based on selected categories.",
+    "technologies": ["HTML", "CSS", "JS"],
+    "url": "./Reto8 - Job Listings/index.html"
+  },
+  {
+    "id": 7,
+    "title": "Social media dashboard",
+    "description": "Single page dashboard with color theme switcher.",
+    "technologies": ["HTML", "CSS", "JS"],
+    "url": "./Reto7 - Social media dashboard with theme switcher"
+  },
+  {
+    "id": 6,
+    "title": "Room homepage",
+    "description": "Elegant landing page with a gallery images slider and navegation menu, fully responsive.",
+    "technologies": ["HTML", "CSS", "JS"],
+    "url": "./Reto6 - Room homepage"
+  },
+  {
+    "id": 5,
+    "title": "Data storage component",
+    "description": "Highly detailed web component build from scratch.",
+    "technologies": ["HTML", "CSS"],
+    "url": "./Reto5 - data storage component"
+  },
+  {
+    "id": 4,
+    "title": "Testimonial slider",
+    "description": "Profesional looking, fully responsive testimonial slider.",
+    "technologies": ["HTML", "CSS", "JS"],
+    "url": "./Reto4 - Testimonial slider"
+  },
+  {
+    "id": 3,
+    "title": "Cards display",
+    "description": "Elegant.",
+    "technologies": ["HTML", "CSS"],
+    "url": "./Reto3 - Cards display"
+  },
+  {
+    "id": 2,
+    "title": "Article preview component",
+    "description": "Simple and good looking flat cards, fully responsive web pase.",
+    "technologies": ["HTML", "CSS", "JS"],
+    "url": "./Reto2 - Article preview component"
+  },
+  {
+    "id": 1,
+    "title": "Huddle (landing page)",
+    "description": "Fully responsive, profesional and colorful landing page.",
+    "technologies": ["HTML", "CSS"],
+    "url": "./Reto1 - Huddle (landing page)"
+  }
+]
