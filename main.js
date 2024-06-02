@@ -35,20 +35,23 @@ document.addEventListener("click", (e) => {
   if (e.target.matches(".card, .card *")) {
     let url = e.target.closest("article.card").dataset.url;
     console.log(url);
-    $modal.classList.add("show");
+    $modal.classList.add("show-bg");
+    $modal.querySelector(".modal-content").classList.add("show");
     $iFrame.setAttribute("src", url);
   }
   // Mobile layout btn
   if (e.target.matches("#mobile-layout, #mobile-layout *")) {
     $modal.querySelector(".modal-content").classList.add("mobile--layout");
+    $modal.querySelector(".layout__header").classList.add("mobile");
   }
   // Desktop layout btn
   if (e.target.matches("#desktop-layout, #desktop-layout *")) {
     $modal.querySelector(".modal-content").classList.remove("mobile--layout");
+    $modal.querySelector(".layout__header").classList.remove("mobile");
   }
   // Close layout btn
   if (e.target.matches(".close-btn, .close-btn *")) {
     // e.target.closest("div.layout").remove();
-    e.target.closest("div.modal").classList.remove("show");
+    e.target.closest("div.modal").classList.remove("show-bg");
   }
 });
