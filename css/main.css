@@ -15,15 +15,18 @@ body {
   font-family: Heebo, sans-serif;
   font-weight: 400;
   font-style: normal;
+  scroll-behavior: smooth;
+  /* scroll-snap-type: proximity; */
 }
 
-a {
+p a {
   color: #3d7068;
   font-style: italic;
 }
 
 .main {
   margin: 1rem;
+  /* scroll-snap-align: center; */
 }
 
 /** Header **/
@@ -66,7 +69,21 @@ a {
 
 /* Presentation */
 .presentation {
-  margin: 2rem;
+  margin: 0 2rem;
+  /* display: flex; */
+}
+
+.presentation h1 {
+  font-size: 5rem;
+}
+.presentation p {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.presentation .next-section {
+  display: block;
+  font-size: 5rem;
+  text-align: center;
 }
 
 /*** Cards styles ***/
@@ -80,6 +97,10 @@ a {
   text-decoration: none;
   width: 100%;
 } */
+
+.cards-container {
+  padding-top: 2rem;
+}
 
 .card {
   background-color: white;
