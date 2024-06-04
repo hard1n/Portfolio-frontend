@@ -25,7 +25,8 @@ p a {
 }
 
 .main {
-  margin: 1rem;
+  /* margin: 1rem; */
+  width: 100%;
   /* scroll-snap-align: center; */
 }
 
@@ -69,8 +70,17 @@ p a {
 
 /* Presentation */
 .presentation {
-  margin: 0 2rem;
+  height: 100vh;
   /* display: flex; */
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2rem;
+  padding-top: 8rem;
+  height: 100vh;
 }
 
 .presentation h1 {
@@ -84,6 +94,11 @@ p a {
   display: block;
   font-size: 5rem;
   text-align: center;
+}
+
+.hero-text {
+  width: 100%;
+  /* text-align: center; */
 }
 
 /*** Cards styles ***/
@@ -115,7 +130,7 @@ p a {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  margin: 1rem;
+  margin: 2rem 1rem;
   padding: 30px;
   overflow: hidden;
   transition: ease 0.3s;
@@ -123,10 +138,35 @@ p a {
   min-width: 300px;
   max-width: 450px;
 }
-
 .card-info {
+  /* background-color: #00000080; */
+  /* background-color: rgba(106, 190, 205, 0.8); */
+  /* background-color: #3d706880; */
+  /* background: linear-gradient(to top, #555555, #55555580); */
+  background: linear-gradient(to top, #3d7068, #3d706880);
+  /* backdrop-filter: blur(2px); */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   padding: 1rem;
+  transition: all 0.3s ease-in-out;
+  height: 90px;
+  width: 100%;
+  z-index: 100;
 }
 
-.card img {
+/* blur top border effect */
+.card-info::before {
+  content: "";
+  background: linear-gradient(to top, #3d706880, transparent);
+  position: absolute;
+  top: -50px;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  z-index: 1000;
 }
