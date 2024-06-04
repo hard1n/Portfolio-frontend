@@ -24,6 +24,10 @@ fetch("./data.json")
       $clone.querySelector(".card").dataset.url = item.url;
       $clone.querySelector(".card__title").textContent = item.title;
       $clone.querySelector(".card__description").textContent = item.description;
+      // $clone.querySelector(".card-img").setAttribute("src", item.preview);
+      $clone.querySelector(
+        ".card"
+      ).style.backgroundImage = `url(${item.preview})`;
       $fragment.appendChild($clone);
     });
     $projectsContainer.append($fragment);

@@ -104,7 +104,7 @@ p a {
 
 .card {
   background-color: white;
-  background-image: url(../assets/images/project_preview/job-listing__frontendmentor.jpg);
+  /* background-image: url(../assets/images/project_preview/job-listing__frontendmentor.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

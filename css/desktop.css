@@ -179,10 +179,10 @@
 .card-info {
   /* background-color: #00000080; */
   /* background-color: rgba(106, 190, 205, 0.8); */
-  background-color: #3d706880;
-  /* background: linear-gradient(to top, #000000, #00000080); */
+  /* background-color: #3d706880; */
+  /* background: linear-gradient(to top, #555555, #55555580); */
   background: linear-gradient(to top, #3d7068, #3d706880);
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(2px); */
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -193,6 +193,7 @@
   transition: all 0.3s ease-in-out;
   height: 80px;
   width: 100%;
+  z-index: 100;
 }
 /* blur top border effect */
 .card-info::before {

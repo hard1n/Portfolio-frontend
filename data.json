@@ -4,6 +4,7 @@
     "title": "Job Listings",
     "description": "Iteractive page where you can filter out jobs based on selected categories.",
     "technologies": ["HTML", "CSS", "JS"],
+    "preview": "./assets/images/project_preview/job-listing__frontendmentor.jpg",
     "url": "./Reto8 - Job Listings/index.html"
   },
   {
@@ -11,6 +12,7 @@
     "title": "Social media dashboard",
     "description": "Single page dashboard with color theme switcher.",
     "technologies": ["HTML", "CSS", "JS"],
+    "preview": "./assets/images/project_preview/social-media-dashboard.jpg",
     "url": "./Reto7 - Social media dashboard with theme switcher"
   },
   {
@@ -18,6 +20,7 @@
     "title": "Room homepage",
     "description": "Elegant landing page with a gallery images slider and navegation menu, fully responsive.",
     "technologies": ["HTML", "CSS", "JS"],
+    "preview": "./assets/images/project_preview/room-homepage-master.jpg",
     "url": "./Reto6 - Room homepage"
   },
   {
@@ -25,6 +28,7 @@
     "title": "Data storage component",
     "description": "Highly detailed web component build from scratch.",
     "technologies": ["HTML", "CSS"],
+    "preview": "./assets/images/project_preview/fylo-data-storage-component.jpg",
     "url": "./Reto5 - data storage component"
   },
   {
@@ -32,6 +36,7 @@
     "title": "Testimonial slider",
     "description": "Profesional looking, fully responsive testimonial slider.",
     "technologies": ["HTML", "CSS", "JS"],
+    "preview": "./assets/images/project_preview/testimonial-slider.jpg",
     "url": "./Reto4 - Testimonial slider"
   },
   {
@@ -39,6 +44,7 @@
     "title": "Cards display",
     "description": "Elegant.",
     "technologies": ["HTML", "CSS"],
+    "preview": "./assets/images/project_preview/cards-display.jpg",
     "url": "./Reto3 - Cards display"
   },
   {
@@ -46,6 +52,7 @@
     "title": "Article preview component",
     "description": "Simple and good looking flat cards, fully responsive web pase.",
     "technologies": ["HTML", "CSS", "JS"],
+    "preview": "./assets/images/project_preview/article-component.jpg",
     "url": "./Reto2 - Article preview component"
   },
   {
@@ -53,6 +60,7 @@
     "title": "Huddle (landing page)",
     "description": "Fully responsive, profesional and colorful landing page.",
     "technologies": ["HTML", "CSS"],
+    "preview": "./assets/images/project_preview/huddle.jpg",
     "url": "./Reto1 - Huddle (landing page)"
   }
 ]
