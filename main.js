@@ -9,21 +9,40 @@ const $card = document.querySelector(".card");
 const $div = document.createElement("div");
 const $header = document.createElement("header");
 const $btn = document.createElement("button");
-console.log($card);
+// const $htmlIcon = document
+//   .createElement("i")
+//   .classList.add("fa-brands fa-html5");
+// const $cssIcon = document
+//   .createElement("i")
+//   .classList.add("fa-brands fa-css3-alt");
+// const $JSIcon = document.createElement("i").classList.add("fa-brands fa-js");
+// console.log($card);
 
 fetch("./data.json")
   .then((res) => {
     return res.json();
   })
   .then((data) => {
-    console.log(data);
+    // console.log(data);
     data.map((item) => {
-      console.log(item);
+      // console.log(item);
       const $clone = $template.content.cloneNode(true);
 
       $clone.querySelector(".card").dataset.url = item.url;
       $clone.querySelector(".card__title").textContent = item.title;
-      $clone.querySelector(".card__description").textContent = item.description;
+      Object.values(item.techs).map((tech) => {
+        // const arrTech = tech.split(" ");
+        // console.log(tech);
+        const $icon = document.createElement("i");
+        $icon.classList.add(...tech);
+        $clone.querySelector(".card__techs").append($icon);
+      });
+      // item.technologies.map((tech) => {
+      //   console.log(tech);
+      //   // document.createElement("i").classList.add();
+      // });
+      $clone.querySelector(".card__description > p").textContent =
+        item.description;
       // $clone.querySelector(".card-img").setAttribute("src", item.preview);
       $clone.querySelector(
         ".card"

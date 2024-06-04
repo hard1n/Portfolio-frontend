@@ -210,7 +210,7 @@
   z-index: 1000;
 }
 
-.card-info p {
+.card-info .card__description {
   opacity: 0;
   visibility: hidden;
 }
@@ -221,7 +221,7 @@
   height: 100%;
 }
 
-.card:hover p {
+.card:hover .card__description {
   opacity: 1;
   visibility: visible;
 }

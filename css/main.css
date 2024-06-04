@@ -138,6 +138,31 @@ p a {
   min-width: 300px;
   max-width: 450px;
 }
+
+.card__techs {
+  font-size: 1.5rem;
+}
+
+.card__techs i {
+  margin-right: 6px;
+}
+
+/** ICONS **/
+.fa-html5 {
+  color: #f06529;
+  /* color: #e34c26; */
+}
+
+.fa-css3-alt {
+  /* color: #2965f1; */
+  /* color: #264de4; */
+  color: lightblue;
+}
+
+.fa-js {
+  color: #f0db4f;
+}
+
 .card-info {
   /* background-color: #00000080; */
   /* background-color: rgba(106, 190, 205, 0.8); */
